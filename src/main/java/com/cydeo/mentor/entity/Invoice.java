@@ -7,23 +7,24 @@ import lombok.Setter;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.ManyToOne;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 
 @Entity
-@Getter
-@Setter
+@Data
 @NoArgsConstructor
 public class Invoice extends BaseEntity{
 
     private String invoiceNumber;
     private String invoiceType;
 
-    @Column(columnDefinition = "DATE")
-    private LocalDate invoiceDate;
+    @Column(columnDefinition = "TIMESTAMP")
+    private LocalDateTime invoiceDate;
 
-/*  This field will be used in STEP-3
+    @ManyToOne
     private Client client;
 
- */
+
 }

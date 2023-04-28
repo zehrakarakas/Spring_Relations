@@ -6,10 +6,11 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
-@Getter
-@Setter
+@Data
 @Entity
 @NoArgsConstructor
 @Table(name="users")
@@ -20,9 +21,8 @@ public class User extends BaseEntity{
     private String password;
     private String email;
 
-    /*  This field will be used in STEP-3
+    @ManyToOne
     private Role role;
 
-     */
 
 }

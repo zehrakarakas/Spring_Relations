@@ -4,11 +4,17 @@ import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.hibernate.mapping.ToOne;
 
 import javax.persistence.Entity;
 
-@Getter
-@Setter
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
+import java.util.List;
+
+
+@Data
 @Entity
 @NoArgsConstructor
 public class Client extends BaseEntity {
@@ -17,8 +23,8 @@ public class Client extends BaseEntity {
     private String phone;
     private String email;
 
-/*  This field will be used in STEP-3
+    @OneToOne
     private Address address;
 
- */
+
 }

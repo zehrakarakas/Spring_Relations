@@ -5,21 +5,22 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import javax.persistence.Entity;
+import javax.persistence.*;
+import java.util.List;
 
 @Entity
-@Setter
-@Getter
+@Data
 @NoArgsConstructor
+@Table (name="invoice_product")
 public class Invoice_Product extends BaseEntity{
 
     private int quantity;
     private double profit;
 
-/*  These fields will be used in STEP-3
 
+    @OneToOne
     private Invoice invoice;
+    @OneToOne
     private Product product;
 
- */
 }

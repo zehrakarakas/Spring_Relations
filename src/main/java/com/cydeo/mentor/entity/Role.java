@@ -7,8 +7,7 @@ import lombok.Setter;
 
 import javax.persistence.Entity;
 
-@Getter
-@Setter
+@Data
 @Entity
 @NoArgsConstructor
 public class Role extends BaseEntity{

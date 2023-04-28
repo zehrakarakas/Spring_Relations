@@ -6,18 +6,19 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.ManyToOne;
 
 @Entity
-@Getter
-@Setter
+@Data
 @NoArgsConstructor
 public class Product extends BaseEntity {
 
     private String name;
     private double price;
 
-/*  This field will be used in STEP-3
+    @ManyToOne
     private Category category;
 
- */
+
 }

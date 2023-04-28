@@ -1,20 +1,21 @@
 package com.cydeo.mentor.entity;
 
 import lombok.*;
+import org.hibernate.mapping.ToOne;
 
 import javax.persistence.Entity;
+import javax.persistence.OneToOne;
 
 @Entity
-@Getter
-@Setter
+@Data
 @NoArgsConstructor
 public class Address extends BaseEntity{
 
     private String description;
     private String zipCode;
 
-    /*  This field will be used in STEP-3
+    @OneToOne
     private State state;
 
-     */
+
 }

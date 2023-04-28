@@ -7,14 +7,10 @@ import lombok.Setter;
 
 import javax.persistence.Entity;
 
-@Getter
-@Setter
+@Data
 @NoArgsConstructor
 @Entity
 public class State extends BaseEntity {
-
-
-
     private String stateCode;
     private String stateName;
 }
