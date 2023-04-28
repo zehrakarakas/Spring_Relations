@@ -4,6 +4,7 @@ import lombok.*;
 import org.hibernate.mapping.ToOne;
 
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.OneToOne;
 
 @Entity
