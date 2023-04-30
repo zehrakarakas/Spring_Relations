@@ -18,9 +18,9 @@ public class Invoice_Product extends BaseEntity{
     private double profit;
 
 
-    @OneToOne
+    @ManyToOne
     private Invoice invoice;
-    @OneToOne
+    @ManyToOne
     private Product product;
 
 }
